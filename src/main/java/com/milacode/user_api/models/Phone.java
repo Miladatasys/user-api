@@ -1,7 +1,7 @@
 package com.milacode.user_api.models;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Pattern;
+
 import lombok.*;
 
 @Entity
@@ -25,7 +25,7 @@ public class Phone {
     @Column(nullable = false)
     private String countrycode;
 
-    @ManyToMany
-    @JoinColumn(name = "user_id", nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "user_id") // nombre de la columna en la tabla phones
     private User user;
 }

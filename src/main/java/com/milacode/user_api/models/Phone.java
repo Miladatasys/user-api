@@ -26,6 +26,6 @@ public class Phone {
     private String countrycode;
 
     @ManyToOne
-    @JoinColumn(name = "user_id") // nombre de la columna en la tabla phones
+    @JoinColumn(name = "user_id") // name of the column in phones table 
     private User user;
 }
